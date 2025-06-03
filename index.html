@@ -1,279 +1,567 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maryam Bigzad's Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
+:root {
+    --primary-color: #cf8cee;
+    --secondary-color: #ed99da;
+    --dark-color: #060606;
+    --darker-color: #0a0a0a;
+    --light-color: #f8f9fa;
+    --glass-color: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 253, 253, 0.956);
+    --glass-shadow: 0 8px 32px rgba(201, 199, 199, 0.3);
+}
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-    <nav>
-        <a href="index.html" class="logo">protfolio of Maryam Bigzad</a>
-        <ul >
-            <li><a href="#home">Home page</a>
-            </li>
-            <li><a href="#about">About me</a>
-            </li>
-            <li><a href="#skills">Skills </a>
-            </li>
-            <li><a href="#portfolio"> my Portfolio</a></li>
-            <li><a href="#contact">Contact me</a>  </li>
-        </ul>
-    </nav>
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="gradient-text">Maryam Bigzad</h1>
-            <p class="fade-slide">Hi!! I'm a self-taught learner</p>
-            <h2>Graphic Designer / Web Designer</h2>
-        </div>
-    </section>
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-    <!--about section-->
-    <section id="about" class="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content glass-card">
-            <div class="about-text">
-                <h3>ABOUT ME</h3>
-                <p>Hi, I amm an 18-year-old self-taught learner from Kabul, Afghanistan, with a deep passion for creativity, technology, and empowering others through education. Since I couldn’t attend traditional school due to the Taliban regime, I took charge of my own learning—exploring HTML, CSS, and digital tools, while also teaching kids online to make learning fun and accessible.
+/* Glassmorphism Effect */
 
-                    I am m especially passionate about building things that have real meaning, whether it is designing beautiful websites, creating educational content, or dreaming up ways to solve problems in my community. I believe that resilience, curiosity, and compassion are my superpowers.
-                    
-                    My goal is to keep learning, keep growing, and use tech to make the world a little kinder and a little smarter.
-                    </p>
-            </div>
-        </div>
-    </section>
-        
+.glass-card {
+    background: var(--glass-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    box-shadow: var(--glass-shadow);
+    padding: 2rem;
+    width: 100%;
+    max-width: 100%;
+    transition: all 0.3s ease;
+}
 
-     <!-- Education -->
-     <section class="education">
-        <h2>Education</h2>
-        <ul>
-            <li>
-                <i class="fas fa-university"></i>
-                University of the people (on going)
-            </li>
-            <li>
-                <i class="fas fa-school"></i>
-                School- Afghan-Turk (2021)
-            </li>
-            <li>
-                <i class="fas fa-book"></i>
-                English skills (IELTS band 8)
-            </li>
-        </ul>
-    </section>
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
 
-    <br><br> <br>
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(83, 82, 82, 0.8);
+    backdrop-filter: blur(10px);
+}
 
+nav .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
 
-      <!-- Experience -->
-      <section class="experience-container">
-        <h2>Experience</h2>
-        <div class="experience-container">
-            <div class="exp-card"> Owner of candle business </div>
-            <div class="exp-card">English Teacher (2021... 2024)</div>
-            <div class="exp-card"> work as an online marketing manager (2022) </div>
-            <div class="exp-card"> working with charity organizations  </div>
-        </div>
-    </section>
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-             <h2 class="section-title">My Skills</h2>
-        <div class="skills-container">
-            <div class="glass-card">
-                <h3>Web Development</h3>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>HTML5</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>CSS</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>JavaScript</span>
-                        <span>20%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 20%;"></div>
-                    </div>
-                </div>
-            </div>
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
 
-            <div class="glass-card">
-                <h3>Graphic Design </h3>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Adobe photoshop</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Adobe illustration</span>
-                        <span>95%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%"></div>
-                    </div>
-                </div>
-                
-            </div>
+nav ul li {
+    margin-left: 1.5rem;
+}
 
-            <div class="glass-card">
-                <h3>Other Skills</h3>
-                <div class="skill-item">
-                    <div class="skill-name"><span>microsoft word</span>
-                        <span>100%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 100%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>PowerPoint</span>
-                        <span>100%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 100%"></div>
-                    </div>
-                </div><div class="skill-item">
-                    <div class="skill-name"><span> Excel</span>
-                        <span>100%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 100%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Canva photoshop</span>
-                        <span>100%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 100%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-      
+nav ul li a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    position: relative;
+}
 
-    <!--Portfolio Section-->
+nav ul li a:hover {
+    color: var(--primary-color);
+}
 
-    <section class="portfolio" id="portfolio">
-        <h2 class="section-title">My Portfolio</h2>
-   <div class="portfolio-filter">
-       <button class="filter-btn" data-filter="all">All of my projects</button>
-       
-   </div>
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
 
-   <div class="portfolio-grid">
-
-       <!--Graphic Project 1-->
-       <div class="portfolio-item glass-card" data-category="graphic">
-           <img src="communityIcon_qnhlys2eb16e1.png" alt="proverbs Project " class="portfolio-img">
-           <div class="portfolio-overlay">
-               <h3>Famous afghan proverbs</h3>
-               <p>website built using HTML and CSS.</p>
-               <a class="portfolio-link" href="https://maryam616.github.io/afghan-proverbs/index.html">View Project</a>
-           </div>
-       </div>
+nav ul li a:hover::after {
+    width: 100%;
+}
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 5%;
+    position: relative;
+    overflow: hidden;
+}
 
 
-       <!--Web Project 1-->
-       <div class="portfolio-item glass-card" data-category="all">
-           <img src="delicious-food-menu-landing-page-template-homepage-design_631465-116.avif" alt="food menu" class="portfolio-img">
-           <div class="portfolio-overlay">
-               <h3>Afghan Recipe Book</h3>
-               <p>a recipe website which is built by using HTML only.</p>
-               <a class="portfolio-link" href="https://maryam616.github.io/asian-fook-menu/" target="_blank">View Project</a>
-           </div>
-       </div>
 
-       <!--Graphic Project 2-->
-       <div class="portfolio-item glass-card" data-category="all">
-           <img src="realistic-landing-page-template-movie-premiere-event_23-2149496016.avif" alt="movie" class="portfolio-img">
-           <div class="portfolio-overlay">
-               <h3>movie Website</h3>
-               <p>A movie website built by using HTML and CSS.</p>
-               <a class="portfolio-link" href="https://maryam616.github.io/my-theater-n1/">View Project</a>
-           </div>
-       </div>
-       
-       
-</section>
-    <!--Contact Section-->
-    <section class="contact" id="contact">
-        <h2 class="section-title">Contact Me</h2>
-        <div class="contact-container glass-card">
-            <form class="cntact-form">
-                <div class="form-group">
-                    <label for="name"> Enter Your Name</label>
-                    <input type="text" id="name" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" class="form-control" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Submit the massege</button>
-            </form>
-        </div>
-    </section>
-    
-    <!--Footer-->
-    <footer class="footer">
-        <div class="social-link">
-            <a href="mailto:maryambigzad001@gmail.com" class="social-link" target="_blank"><i class="fab fa-envelope"></i></a>
-            <a href="https://www.instagram.com/m_ikkk1?igsh=MTNmOWNueWx0c25hMg%3D%3D&utm_source=qr" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="https://x.com/MARYAMKK?s=21" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://github.com/maryam616" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://t.me/maryam_bigzad" class="social-link" target="_blank"> <i class="fab fa-telegram-plane"></i></a>
-        </div>
-    </footer>
-</div>
-<footer>
-    <div class="footer-inner">
-        <div class="footer-item">
-                <p>© copyright 2025 created and designed by</p>
-                <p>Maryam Bigzad</p>
-        </div>
-    </div>
-</footer>
 
-</div>
-</footer>
-</body>
-</html>
+.hero-content h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.gradient-text {
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: bold;
+    background: linear-gradient(90deg, #bf2fd5, var(--secondary-color), #eae8e8);
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradientMove 3s linear infinite;
+}
+.fade-slide {
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlide 1.5s ease-out forwards;
+    animation-delay: 0.3s; 
+  }
+  .fade-slide {
+  color: rgb(254, 216, 250);
+  opacity: 0;
+ 
+}
+  
+  @keyframes fadeSlide {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.hero-content h2 {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 300;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease 1s forwards;
+    font-family: 'Playfair Display', serif;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* About Section */
+.about {
+    padding: 8rem 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 3rem;
+    color: var(--light-color);
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 0 10px var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.about-content:hover {
+    box-shadow: 0 0 25px 5px var(--secondary-color);
+}
+
+.about-text {
+    flex: 1;
+    padding: 1rem;
+}
+
+.about-text h3 {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: #f1ebf1;
+}
+/* Education */
+.education {
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;}
+
+
+.education ul {
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.education li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.education i {
+    margin-left: 10px;
+    color: #d19de0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+
+  /* Experience with 3D Flip on Hover */
+  
+.experience-container {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    perspective: 1000px;
+
+    /* Enables 3D effect */
+}
+
+.exp-card {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 45%;
+    transition: transform 0.6s ease,  0.3s ease;
+    border: 2px solid transparent;
+    transform-style: preserve-3d;
+}
+
+.exp-card:hover {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #444;
+    border-color: #d6b2ea;
+    transform: rotateY(10deg) rotateX(5deg);}
+/* Skills Section */
+.skills {
+    padding: 8rem 5%;
+    background-color: var(--darker-color);
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.glass-card {
+    box-shadow: 0 0 10px var(--primary-color);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 100%;
+}
+
+.glass-card:hover {
+    box-shadow: 0 0 25px 5px var(--secondary-color);
+}
+
+.skill-category h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+}
+
+.skill-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 8rem 5%;
+}
+
+.portfolio-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    color: var(--light-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+.filter-btn:hover {
+    background: var(--primary-color);
+    color: var(--dark-color);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover {
+    box-shadow: 0 0 25px 5px var(--secondary-color);
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover .portfolio-img {
+    transform: scale(1.05);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background: rgba(18, 18, 18, 0.9);
+    transition: bottom 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    bottom: 0;
+}
+
+.portfolio-overlay h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.portfolio-overlay p {
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+    margin-bottom: 1rem;
+}
+
+.portfolio-link {
+    display: inline-block;
+    color: var(--light-color);
+    text-decoration: none;
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+}
+
+.portfolio-link:hover {
+    background: var(--primary-color);
+    color: var(--dark-color);
+}
+
+/* Contact Section */
+.contact-container {
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: rgba(163, 145, 145, 0.718);
+    box-shadow: 0 0 10px var(--primary-color);
+    transition: all 0.3s ease;
+    width: 80%;
+}
+
+.contact-container:hover {
+    box-shadow: 0 0 25px 5px var(--secondary-color);
+}
+
+.contact-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+.form-control {
+    background: rgba(224, 215, 215, 0.315);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    color: var(--light-color);
+    font-family: inherit;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(213, 116, 203, 0.2);
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: var(--primary-color);
+    color: var(--dark-color);
+    border: none;
+    margin-top: 15px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* Footer */
+.footer {
+    padding: 3rem 5%;
+    text-align: center;
+    background-color: var(--darker-color);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.social-link {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    padding: 0 5px;
+}
+
+.social-link:hover {
+    color: var(--primary-color);
+}
+
+
+.footer-inner .footer-item p{
+    max-width: 80%;
+    justify-self: center;
+    display: flex;
+    display: block;
+    flex-wrap: wrap;
+}
+
+
 
